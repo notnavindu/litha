@@ -1,0 +1,62 @@
+body {
+  background-color: #000000;
+  color: #fff;
+  font-family: "Arial";
+  padding: 10px;
+  text-align: center;
+}
+
+h3,
+h1,
+h4 {
+  text-align: center;
+}
+
+.time {
+  font-family: "Roboto Mono", monospace;
+  font-size: 350%;
+  text-align: center;
+}
+#time {
+  margin-bottom: 5px;
+}
+
+.nakath-title {
+  color: #ff9400 !important;
+  font-size: 200%;
+}
+
+.single-nakatha {
+  margin: auto;
+  width: 90%;
+  border-radius: 10px;
+  padding: 10px;
+  background: #111;
+}
+
+.expired-card {
+  opacity: 0.5;
+}
+
+@keyframes glowing {
+  0% {
+    box-shadow: 0 0 -10px #fff;
+    background-color: #111;
+  }
+  40% {
+    box-shadow: 0 0 20px #fff;
+    background-color: #212121;
+  }
+  60% {
+    box-shadow: 0 0 20px #fff;
+    background-color: #212121;
+  }
+  100% {
+    box-shadow: 0 0 -10px #fff;
+    background-color: #111;
+  }
+}
+
+.card-glow {
+  animation: glowing 3000ms infinite;
+}
