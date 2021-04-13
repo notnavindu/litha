@@ -60,3 +60,11 @@ h4 {
 .card-glow {
   animation: glowing 3000ms infinite;
 }
+
+.footer {
+  opacity: 0.5;
+}
+
+a {
+  color: #fff;
+}

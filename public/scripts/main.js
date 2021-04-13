@@ -1,45 +1,50 @@
-var times = {
-  "1": {
-    time: "Apr 09, 2019 10:28:25",
-    title: "නව සඳ බැලීම"
+var times = [
+  {
+    time: "Apr 12, 2021 00:00:00+5:30",
+    title: "පරණ අවුරුද්ද සඳහා ස්නානය කිරීම",
+  },
+  {
+    time: "Apr 16, 2021 00:00:00+5:30",
+    title: "නව සඳ බැලීම",
+  },
+  {
+    time: "Apr 13, 2021 20:09:00+5:30",
+    title: "පුණ්‍ය කාලය",
+  },
+  {
+    time: "Apr 14, 2021 08:57:00+5:30",
+    title: "පුණ්‍ය කාලය අවසානය",
+  },
+  {
+    time: "Apr 14, 2021 2:33:00+5:30",
+    title: "අලුත් අවුරුදු උදාව",
+  },
+  {
+    time: "Apr 14, 2021 6:17:00+5:30",
+    title: "ආහාර පිසීම",
+  },
+  {
+    time: "Apr 14, 2021 7:41:00+5:30",
+    title: "වැඩ ඇල්ලීම, ගනුදෙනු කිරීම හා ආහාර අනුභවය",
   },
 
-  "2": {
-    time: "Apr 13",
-    title: "පරණ අවුරුද්ද සඳහා ස්නානය කිරීම"
+  {
+    time: "Apr 17, 2021 07:16:00+5:30",
+    title: "හිස තෙල් ගෑම",
   },
-
-  "3": {
-    time: "Apr 14, 2019 07:45:00",
-    title: "පුණ්‍ය කාලය"
+  {
+    time: "Apr 19, 2021 06:39:00+5:30",
+    title: "රැකිරක්ෂා සඳහා පිටත් ව යෑම",
   },
-  "4": {
-    time: "Apr 14, 2019 14:09:00",
-    title: "අලුත් අවුරුදු උදාව"
+  {
+    time: "Apr 16, 2021 06:40:00+5:30 ",
+    title: "පැළ සිටුවීම",
   },
-  "5": {
-    time: "Apr 14, 2019 14:42:00",
-    title: "ආහාර පිසීම"
-  },
-  "6": {
-    time: "Apr 14, 2019 15:54:00",
-    title: "වැඩ ඇල්ලීම, ගනුදෙනු කිරීම හා ආහාර අනුභවය"
-  },
-
-  "7": {
-    time: "Apr 17, 2019 07:40:00",
-    title: "හිස තෙල් ගෑම"
-  },
-  "8": {
-    time: "Apr 18, 2019 04:52:00",
-    title: "රැකිරක්ෂා සඳහා පිටත් ව යෑම"
-  }
-};
-
+];
 function coundDownTimer() {
   startTime();
   // Update the count down every 1 second
-  var x = setInterval(function() {
+  var x = setInterval(function () {
     for (var key in times) {
       // Set the date we're counting down to
       var countDownDate = new Date(times[key]["time"]).getTime();
@@ -93,9 +98,8 @@ function checkTime(i) {
   return i;
 }
 
-$(window).on("load", function() {
+$(window).on("load", function () {
   for (var key in times) {
-    console.log(times[key]);
     $("#nakath").append(
       `
     <div class="single-nakatha" id="downcard` +
@@ -106,7 +110,7 @@ $(window).on("load", function() {
         ` </span><br /><br>
         <span class="nakath-time"> ` +
         times[key]["time"] +
-        ` GMT+05:30 </span><br /> </span>
+        ` </span><br /> </span>
 
         <span id="cdown` +
         key +
