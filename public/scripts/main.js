@@ -1,46 +1,42 @@
 var times = [
   {
-    time: "Apr 12, 2021 00:00:00+5:30",
-    title: "පරණ අවුරුද්ද සඳහා ස්නානය කිරීම",
-  },
-  {
-    time: "Apr 16, 2021 00:00:00+5:30",
+    time: "Apr 3, 2022 00:00:00+5:30",
     title: "නව සඳ බැලීම",
   },
   {
-    time: "Apr 13, 2021 20:09:00+5:30",
-    title: "පුණ්‍ය කාලය",
+    time: "Apr 13, 2022 00:00:00+5:30",
+    title: "පරණ අවුරුද්ද සඳහා ස්නානය කිරීම",
   },
   {
-    time: "Apr 14, 2021 08:57:00+5:30",
-    title: "පුණ්‍ය කාලය අවසානය",
-  },
-  {
-    time: "Apr 14, 2021 2:33:00+5:30",
+    time: "Apr 14, 2022 8:41:17+5:30",
     title: "අලුත් අවුරුදු උදාව",
   },
   {
-    time: "Apr 14, 2021 6:17:00+5:30",
+    time: "Apr 14, 2022 2:17:00+5:30",
+    title: "පුණ්‍ය කාලය",
+  },
+  {
+    time: "Apr 14, 2022 15:05:00+5:30",
+    title: "පුණ්‍ය කාලය අවසානය",
+  },
+  {
+    time: "Apr 14, 2022 9:05:00+5:30",
     title: "ආහාර පිසීම",
   },
   {
-    time: "Apr 14, 2021 7:41:00+5:30",
+    time: "Apr 14, 2022 10:17:00+5:30",
     title: "වැඩ ඇල්ලීම, ගනුදෙනු කිරීම හා ආහාර අනුභවය",
   },
-
   {
-    time: "Apr 17, 2021 07:16:00+5:30",
+    time: "Apr 17, 2022 07:04:00+5:30",
     title: "හිස තෙල් ගෑම",
   },
   {
-    time: "Apr 19, 2021 06:39:00+5:30",
+    time: "Apr 18, 2022 06:51:00+5:30",
     title: "රැකිරක්ෂා සඳහා පිටත් ව යෑම",
   },
-  {
-    time: "Apr 16, 2021 06:40:00+5:30 ",
-    title: "පැළ සිටුවීම",
-  },
 ];
+
 function coundDownTimer() {
   startTime();
   // Update the count down every 1 second
@@ -103,18 +99,18 @@ $(window).on("load", function () {
     $("#nakath").append(
       `
     <div class="single-nakatha" id="downcard` +
-        key +
-        `">
+      key +
+      `">
         <span class="nakath-title">` +
-        times[key]["title"] +
-        ` </span><br /><br>
+      times[key]["title"] +
+      ` </span><br /><br>
         <span class="nakath-time"> ` +
-        times[key]["time"] +
-        ` </span><br /> </span>
+      times[key]["time"].replace("+5:30", " (GMT+5:30)") +
+      ` </span><br /> </span>
 
         <span id="cdown` +
-        key +
-        `" class="time">0d 0h 0m 0s</span>
+      key +
+      `" class="time">0d 0h 0m 0s</span>
   </div><br><br>`
     );
   }
