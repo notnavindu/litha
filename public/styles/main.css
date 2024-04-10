@@ -62,9 +62,16 @@ h4 {
 }
 
 .footer {
+  margin-top: 50px;
   opacity: 0.5;
 }
 
 a {
   color: #fff;
+}
+
+.litha-img {
+  width: 90%;
+  max-width: 500px;
+  margin: auto;
 }
